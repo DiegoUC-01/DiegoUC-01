@@ -14,7 +14,8 @@ def decrypt_text(key: bytes, encrypted_text: str) -> str:
     ciphertext = encrypted_bytes[16:]
 
     # Crear cifrador AES en modo CBC con el mismo IV
-    cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
+    cipher = Cipher
+        (algorithms.AES(key), modes.CBC(iv), backend=default_backend())
     decryptor = cipher.decryptor()
 
     # Desencriptar
