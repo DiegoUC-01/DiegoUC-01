@@ -11,7 +11,8 @@ def encrypt_text(key: bytes, plaintext: str) -> bytes:
     iv = os.urandom(16)
 
     # Crear cifrador AES en modo CBC
-    cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
+    cipher = Cipher
+        (algorithms.AES(key), modes.CBC(iv), backend=default_backend())
     encryptor = cipher.encryptor()
 
     # Aplicar padding PKCS7
